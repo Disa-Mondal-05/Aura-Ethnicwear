@@ -447,7 +447,7 @@
       padding: 80px 24px 32px;
       overflow-y: auto;
       transform: translateX(100%);
-      transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+      transition: transform 0.35s cubic-bezier(.4, 0, .2, 1);
       pointer-events: none;
     }
 
@@ -3046,55 +3046,149 @@
     @media(max-width:768px) {
 
       /* Prevent horizontal scroll */
-      body, html { overflow-x: hidden; }
+      body,
+      html {
+        overflow-x: hidden;
+      }
 
       /* Navbar */
-      .nav-top { font-size: .65rem; padding: 6px; }
-      .nav-main { padding: 12px 0; }
-      .logo { font-size: 1.3rem; }
+      .nav-top {
+        font-size: .65rem;
+        padding: 6px;
+      }
+
+      .nav-main {
+        padding: 12px 0;
+      }
+
+      .logo {
+        font-size: 1.3rem;
+      }
 
       /* Hero */
-      .hero { margin-top: 88px; height: 60vh; min-height: 380px; }
-      .slide-content { padding: 0 16px; }
-      .slide-content h1 { font-size: clamp(1.4rem, 5.5vw, 2rem); margin-bottom: 12px; }
-      .slide-content p { display: none; }
-      .slide-content .flex { gap: 8px; }
-      .slide-content .btn { padding: 10px 18px; font-size: .75rem; }
-      .slide-tag { font-size: .72rem; padding: 5px 12px; margin-bottom: 14px; }
+      .hero {
+        margin-top: 88px;
+        height: 60vh;
+        min-height: 380px;
+      }
+
+      .slide-content {
+        padding: 0 16px;
+      }
+
+      .slide-content h1 {
+        font-size: clamp(1.4rem, 5.5vw, 2rem);
+        margin-bottom: 12px;
+      }
+
+      .slide-content p {
+        display: none;
+      }
+
+      .slide-content .flex {
+        gap: 8px;
+      }
+
+      .slide-content .btn {
+        padding: 10px 18px;
+        font-size: .75rem;
+      }
+
+      .slide-tag {
+        font-size: .72rem;
+        padding: 5px 12px;
+        margin-bottom: 14px;
+      }
 
       /* Slider nav arrows */
-      .slider-nav { width: 36px; height: 36px; font-size: 1rem; }
-      .slider-nav.prev { left: 10px; }
-      .slider-nav.next { right: 10px; }
-      .slider-dots { bottom: 16px; }
-      .dot { width: 6px; height: 6px; }
-      .dot.active { width: 18px; }
+      .slider-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+      }
+
+      .slider-nav.prev {
+        left: 10px;
+      }
+
+      .slider-nav.next {
+        right: 10px;
+      }
+
+      .slider-dots {
+        bottom: 16px;
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+      }
+
+      .dot.active {
+        width: 18px;
+      }
 
       /* Sections */
-      .categories { padding: 40px 0; }
-      .products-section { padding: 40px 0; }
-      .testimonials { padding: 40px 0; }
-      .gallery-section { padding: 40px 0; }
-      .newsletter { padding: 40px 0; }
+      .categories {
+        padding: 40px 0;
+      }
+
+      .products-section {
+        padding: 40px 0;
+      }
+
+      .testimonials {
+        padding: 40px 0;
+      }
+
+      .gallery-section {
+        padding: 40px 0;
+      }
+
+      .newsletter {
+        padding: 40px 0;
+      }
 
       /* Category grid — 2 cols on phone */
       .cat-grid {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
       }
-      .cat-card { aspect-ratio: 2/3; }
-      .cat-info h3 { font-size: 1.1rem; }
-      .cat-info p { font-size: .7rem; }
-      .cat-info .btn { padding: 6px 14px; font-size: .68rem; }
+
+      .cat-card {
+        aspect-ratio: 2/3;
+      }
+
+      .cat-info h3 {
+        font-size: 1.1rem;
+      }
+
+      .cat-info p {
+        font-size: .7rem;
+      }
+
+      .cat-info .btn {
+        padding: 6px 14px;
+        font-size: .68rem;
+      }
 
       /* Product grid — 2 cols */
       .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
       }
-      .product-name { font-size: .8rem; }
-      .price-current { font-size: .88rem; }
-      .price-old { font-size: .75rem; }
+
+      .product-name {
+        font-size: .8rem;
+      }
+
+      .price-current {
+        font-size: .88rem;
+      }
+
+      .price-old {
+        font-size: .75rem;
+      }
 
       /* Gallery */
       .gallery-grid {
@@ -3102,46 +3196,114 @@
         grid-template-rows: auto;
         gap: 8px;
       }
-      .gallery-item:first-child { grid-row: span 1; grid-column: span 2; }
+
+      .gallery-item:first-child {
+        grid-row: span 1;
+        grid-column: span 2;
+      }
 
       /* Marquee */
-      .marquee-track span { font-size: .68rem; }
+      .marquee-track span {
+        font-size: .68rem;
+      }
 
       /* Newsletter form */
-      .newsletter-form { flex-direction: column; border-radius: var(--radius); }
-      .newsletter-form .btn { border-radius: 50px; }
-      .newsletter h2 { font-size: 1.4rem; }
+      .newsletter-form {
+        flex-direction: column;
+        border-radius: var(--radius);
+      }
+
+      .newsletter-form .btn {
+        border-radius: 50px;
+      }
+
+      .newsletter h2 {
+        font-size: 1.4rem;
+      }
 
       /* Footer */
-      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-      footer { padding: 40px 0 0; }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      footer {
+        padding: 40px 0 0;
+      }
 
       /* Festive section */
-      .festive-products { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .festive-banner { padding: 40px 0; }
+      .festive-products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .festive-banner {
+        padding: 40px 0;
+      }
 
       /* Recommendations scroll */
-      .rec-scroll .product-card { min-width: 160px; }
+      .rec-scroll .product-card {
+        min-width: 160px;
+      }
 
       /* Tabs on listing page */
-      .filter-tabs { flex-wrap: wrap; gap: 6px; }
-      .tab-btn { font-size: .75rem; padding: 7px 14px; }
+      .filter-tabs {
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .tab-btn {
+        font-size: .75rem;
+        padding: 7px 14px;
+      }
 
       /* Cart notif */
-      .cart-notif { right: 8px; left: 8px; max-width: none; }
+      .cart-notif {
+        right: 8px;
+        left: 8px;
+        max-width: none;
+      }
 
       /* WA button */
-      .wa-btn { width: 46px; height: 46px; font-size: 1.3rem; bottom: 16px; right: 16px; }
+      .wa-btn {
+        width: 46px;
+        height: 46px;
+        font-size: 1.3rem;
+        bottom: 16px;
+        right: 16px;
+      }
     }
 
     @media(max-width:400px) {
+
       /* Very small phones */
-      .cat-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
-      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-      .slide-content h1 { font-size: 1.3rem; }
-      .hero { height: 55vh; min-height: 320px; }
-      .section-title h2 { font-size: 1.3rem; }
-      .slide-content .btn { padding: 8px 14px; font-size: .7rem; }
+      .cat-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .slide-content h1 {
+        font-size: 1.3rem;
+      }
+
+      .hero {
+        height: 55vh;
+        min-height: 320px;
+      }
+
+      .section-title h2 {
+        font-size: 1.3rem;
+      }
+
+      .slide-content .btn {
+        padding: 8px 14px;
+        font-size: .7rem;
+      }
     }
   </style>
 </head>
@@ -3811,11 +3973,6 @@
                 <option value="rating">Highest Rated</option>
                 <option value="newest">New Arrivals</option>
               </select>
-              <select onchange="showToast('Items per page updated!')">
-                <option>12 per page</option>
-                <option>24 per page</option>
-                <option>48 per page</option>
-              </select>
             </div>
           </div>
           <div class="product-grid" id="listingGrid"></div>
@@ -3831,14 +3988,14 @@
     </div>
   </div>
 
-  <!-- ════════════════════════════════════ PRODUCT DETAIL ════════════════════════════════════ -->
+
   <div id="page-detail" class="page">
     <div style="margin-top:96px;">
       <div class="container">
         <div class="breadcrumb" style="padding:20px 0;">
           <a href="#" onclick="showPage('home')">Home</a> <span>›</span>
-          <a href="#" onclick="showPage('listing')">Sarees</a> <span>›</span>
-          <span>Kanjivaram Silk Saree</span>
+          <a href="#" onclick="showPage('listing')" id="detailCatLink">Collections</a> <span>›</span>
+          <span id="detailBreadcrumb">Product</span>
         </div>
       </div>
       <div class="container">
@@ -3846,86 +4003,45 @@
           <!-- IMAGES -->
           <div class="detail-images">
             <div class="main-img">
-              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=700&q=80" alt="Product"
-                id="mainDetailImg" />
+              <img src="" alt="Product" id="mainDetailImg" />
             </div>
-            <div class="detail-thumbnails">
-              <div class="thumb active"
-                onclick="changeDetailImg(this,'https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=700&q=80')">
-                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=200&q=80" alt="" />
-              </div>
-              <div class="thumb"
-                onclick="changeDetailImg(this,'https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=700&q=80')">
-                <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=200&q=80" alt="" />
-              </div>
-              <div class="thumb"
-                onclick="changeDetailImg(this,'https://images.unsplash.com/photo-1594938298603-c8148c4b4c06?w=700&q=80')">
-                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b4c06?w=200&q=80" alt="" />
-              </div>
-              <div class="thumb"
-                onclick="changeDetailImg(this,'https://images.unsplash.com/photo-1617627143233-4671e4e0d5fb?w=700&q=80')">
-                <img src="https://images.unsplash.com/photo-1617627143233-4671e4e0d5fb?w=200&q=80" alt="" />
-              </div>
-            </div>
+            <div class="detail-thumbnails" id="detailThumbnails"></div>
           </div>
 
           <!-- INFO -->
           <div class="detail-info">
             <div>
               <div class="flex" style="gap:8px;flex-wrap:wrap;margin-bottom:8px;">
-                <span class="badge badge-maroon">Bestseller</span>
+                <span class="badge badge-maroon" id="detailBadge">Bestseller</span>
                 <span class="badge badge-gold">Free Shipping</span>
-                <span class="tag">In Stock — 8 left</span>
+                <span class="tag">In Stock</span>
               </div>
-              <h1 class="serif">Kanjivaram Pure Silk Saree — Deep Maroon with Gold Zari</h1>
+              <h1 class="serif" id="detailName">Product Name</h1>
               <div class="flex" style="gap:10px;margin-top:10px;">
-                <div class="star">★★★★★</div>
-                <span style="font-size:.85rem;color:var(--muted)">4.9 (312 reviews)</span>
-                <span style="font-size:.85rem;color:var(--gold);font-weight:600;">Top Rated</span>
+                <div class="star" id="detailStars">★★★★★</div>
+                <span style="font-size:.85rem;color:var(--muted)" id="detailRating">5.0 (0 reviews)</span>
               </div>
             </div>
 
             <div class="detail-price">
-              <span class="current">₹8,499</span>
-              <span class="old">₹12,999</span>
-              <span class="disc">35% OFF</span>
+              <span class="current" id="detailPrice">₹0</span>
+              <span class="old" id="detailOldPrice">₹0</span>
+              <span class="disc" id="detailDisc">0% OFF</span>
             </div>
 
             <div class="detail-section">
               <h4>Choose Color</h4>
-              <div class="color-dots">
-                <div class="color-dot active" style="background:#7c1c2e;" title="Maroon" onclick="selectColor(this)">
-                </div>
-                <div class="color-dot" style="background:#1a3a5c;" title="Navy" onclick="selectColor(this)"></div>
-                <div class="color-dot" style="background:#2d6a2d;" title="Forest Green" onclick="selectColor(this)">
-                </div>
-                <div class="color-dot" style="background:#c9a84c;" title="Gold" onclick="selectColor(this)"></div>
-                <div class="color-dot" style="background:#1a1a1a;" title="Black" onclick="selectColor(this)"></div>
-              </div>
+              <div class="color-dots" id="detailColors"></div>
             </div>
 
             <div class="detail-section">
-              <h4>Select Size / Blouse Size</h4>
-              <div class="size-opts">
-                <button class="size-opt active" onclick="selectSize(this)">Free Size (6 Yds)</button>
-                <button class="size-opt" onclick="selectSize(this)">Blouse 32</button>
-                <button class="size-opt" onclick="selectSize(this)">Blouse 34</button>
-                <button class="size-opt" onclick="selectSize(this)">Blouse 36</button>
-                <button class="size-opt" onclick="selectSize(this)">Blouse 38</button>
-                <button class="size-opt" onclick="selectSize(this)">Blouse 40</button>
-              </div>
+              <h4 id="detailSizeLabel">Select Size</h4>
+              <div class="size-opts" id="detailSizes"></div>
             </div>
 
             <div class="detail-section">
               <h4>Fabric Details</h4>
-              <div class="fabric-table">
-                <span class="fabric-key">Fabric</span><span class="fabric-val">Pure Kanjivaram Silk</span>
-                <span class="fabric-key">Weave</span><span class="fabric-val">Handloom Zari</span>
-                <span class="fabric-key">Length</span><span class="fabric-val">6.3 Meters</span>
-                <span class="fabric-key">Width</span><span class="fabric-val">44 inches</span>
-                <span class="fabric-key">Blouse</span><span class="fabric-val">Unstitched 0.8m</span>
-                <span class="fabric-key">Wash</span><span class="fabric-val">Dry Clean Only</span>
-              </div>
+              <div class="fabric-table" id="detailFabric"></div>
             </div>
 
             <div class="detail-section">
@@ -3936,19 +4052,18 @@
                   <span id="qtyVal">1</span>
                   <button onclick="changeQty(1)">+</button>
                 </div>
-                <span style="font-size:.82rem;color:var(--muted);">Only 8 units left!</span>
               </div>
             </div>
 
             <div class="detail-ctas">
-              <button class="btn btn-gold" onclick="addToCart(1)">🛍 Add to Cart</button>
+              <button class="btn btn-gold" id="detailAddCart" onclick="addToCart(0)">🛍 Add to Cart</button>
               <button class="btn btn-dark" onclick="showPage('checkout')">⚡ Buy Now</button>
             </div>
 
             <div class="delivery-box">
               <div class="delivery-item"><span>🚚</span><span>Free delivery on orders above ₹999</span></div>
               <div class="delivery-item"><span>📅</span><span>Estimated delivery: 3–6 business days</span></div>
-              <div class="delivery-item"><span>↩️</span><span>Easy 7-day returns & exchange</span></div>
+              <div class="delivery-item"><span>↩️</span><span>Easy 7-day returns &amp; exchange</span></div>
               <div class="delivery-item"><span>🔒</span><span>100% authentic, quality guaranteed</span></div>
             </div>
           </div>
@@ -3965,7 +4080,6 @@
       </div>
     </div>
   </div>
-
   <!-- ════════════════════════════════════ CART PAGE ════════════════════════════════════ -->
   <div id="page-cart" class="page">
     <div class="page-header">
@@ -4570,20 +4684,21 @@
       { id: 29, name: 'Pink Mughal Print Lehenga', cat: 'Lehenga', price: 19999, old: 29999, disc: 33, rating: 4.8, reviews: 61, img: 'images/pexels-pratik-patil-415018186-16803130.jpg', img2: 'images/Rama-Green-Bridal-Wedding-lehenga-choli0.jpeg', badge: 'New', wished: false },
       { id: 30, name: 'Gold Zari Embroidered Dupatta', cat: 'Dupatta', price: 2299, old: 3499, disc: 34, rating: 4.8, reviews: 145, img: 'images/dupatta istockphoto-1265032254-612x612.jpg', img2: 'images/dupatta 514q7n+hbBL._AC_UY1100_.jpg', badge: 'Bridal', wished: false },
     ];
+    window.products = products; // expose for failsafe click handler
 
     function makeCard(p, small = false) {
       const stars = '★'.repeat(Math.floor(p.rating)) + '☆'.repeat(5 - Math.floor(p.rating));
       const badgeCls = p.badge === 'Bestseller' || p.badge === 'Premium' ? 'badge-maroon' : p.badge === 'New' ? 'badge-new' : 'badge-gold';
-      return `<div class="product-card" style="${small ? 'min-width:220px;' : ''}">
+      return `<div class="product-card" data-id="${p.id}" style="${small ? 'min-width:220px;' : ''}cursor:pointer;">
     <div class="product-img-wrap">
       <img src="${p.img}" alt="${p.name}" loading="lazy"/>
       <div class="product-img-hover"><img src="${p.img2}" alt="${p.name}" loading="lazy"/></div>
       <div class="product-badges">${p.badge ? `<span class="badge ${badgeCls}">${p.badge}</span>` : ''}<span class="badge badge-gold">-${p.disc}%</span></div>
       <div class="product-actions">
-        <button class="product-action-btn ${p.wished ? 'wished' : ''}" title="Wishlist" onclick="toggleWish(this,${p.id})">♡</button>
-        <button class="product-action-btn" title="Quick view" onclick="showPage('detail')">👁</button>
+        <button class="product-action-btn ${p.wished ? 'wished' : ''}" data-action="wish" data-id="${p.id}" title="Wishlist">♡</button>
+        <button class="product-action-btn" data-action="detail" data-id="${p.id}" title="Quick view">👁</button>
       </div>
-      <div class="quick-cart" onclick="addToCart(${p.id})">+ Add to Cart</div>
+      <div class="quick-cart" data-action="cart" data-id="${p.id}">+ Add to Cart</div>
     </div>
     <div class="product-info">
       <div class="product-category">${p.cat}</div>
@@ -4593,8 +4708,9 @@
     </div>
   </div>`;
     }
+    window.makeCard = makeCard;
 
-    // ── RENDER GRIDS ──
+
     function renderGrid(id, arr) { const el = document.getElementById(id); if (el) el.innerHTML = arr.map(p => makeCard(p)).join(''); }
     function renderScroll(id, arr) { const el = document.getElementById(id); if (el) el.innerHTML = arr.map(p => makeCard(p, true)).join(''); }
 
@@ -4659,6 +4775,120 @@
         }
       });
     }
+
+    // ── SHOW PRODUCT DETAIL ──
+    var _currentDetailId = 1;
+    window.showDetail = function (id) {
+      var p = products.find(function (x) { return x.id === id; });
+      if (!p) return;
+      _currentDetailId = id;
+
+      // Navigate to detail page
+      document.querySelectorAll('.page').forEach(function (pg) { pg.classList.remove('active'); });
+      var pg = document.getElementById('page-detail');
+      if (pg) pg.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Breadcrumb
+      var catLink = document.getElementById('detailCatLink');
+      if (catLink) catLink.textContent = p.cat + 's';
+      var bread = document.getElementById('detailBreadcrumb');
+      if (bread) bread.textContent = p.name;
+
+      // Main image
+      var mainImg = document.getElementById('mainDetailImg');
+      if (mainImg) { mainImg.src = p.img; mainImg.alt = p.name; }
+
+      // Thumbnails
+      var thumbsEl = document.getElementById('detailThumbnails');
+      if (thumbsEl) {
+        thumbsEl.innerHTML =
+          '<div class="thumb active" onclick="changeDetailImg(this,\'' + p.img + '\')">' +
+          '<img src="' + p.img + '" alt="" /></div>' +
+          '<div class="thumb" onclick="changeDetailImg(this,\'' + p.img2 + '\')">' +
+          '<img src="' + p.img2 + '" alt="" /></div>';
+      }
+
+      // Badge, name, rating
+      var badge = document.getElementById('detailBadge');
+      if (badge) badge.textContent = p.badge || 'New';
+      var name = document.getElementById('detailName');
+      if (name) name.textContent = p.name;
+      var stars = '\u2605'.repeat(Math.floor(p.rating)) + '\u2606'.repeat(5 - Math.floor(p.rating));
+      var starsEl = document.getElementById('detailStars');
+      if (starsEl) starsEl.textContent = stars;
+      var ratingEl = document.getElementById('detailRating');
+      if (ratingEl) ratingEl.textContent = p.rating + ' (' + p.reviews + ' reviews)';
+
+      // Price
+      var priceEl = document.getElementById('detailPrice');
+      if (priceEl) priceEl.textContent = '\u20b9' + p.price.toLocaleString('en-IN');
+      var oldEl = document.getElementById('detailOldPrice');
+      if (oldEl) oldEl.textContent = '\u20b9' + p.old.toLocaleString('en-IN');
+      var discEl = document.getElementById('detailDisc');
+      if (discEl) discEl.textContent = p.disc + '% OFF';
+
+      // Color options
+      var colorMap = {
+        Saree: [['#7c1c2e', 'Maroon'], ['#1a3a5c', 'Navy'], ['#2d6a2d', 'Green'], ['#c9a84c', 'Gold'], ['#1a1a1a', 'Black']],
+        Kurti: [['#c9a84c', 'Yellow'], ['#7c1c2e', 'Maroon'], ['#1a6a5c', 'Teal'], ['#3a1a5c', 'Purple'], ['#fff0f0', 'Pink']],
+        Lehenga: [['#e75480', 'Pink'], ['#c9a84c', 'Gold'], ['#7c1c2e', 'Red'], ['#2d6a2d', 'Green'], ['#1a3a5c', 'Navy']],
+        Churidar: [['#7c1c2e', 'Red'], ['#1a3a5c', 'Blue'], ['#2d6a2d', 'Green'], ['#c9a84c', 'Gold'], ['#1a1a1a', 'Black']],
+        Dupatta: [['#e75480', 'Pink'], ['#c9a84c', 'Gold'], ['#7c1c2e', 'Maroon'], ['#1a6a5c', 'Teal'], ['#9b59b6', 'Purple']]
+      };
+      var colors = colorMap[p.cat] || colorMap['Saree'];
+      var colorsEl = document.getElementById('detailColors');
+      if (colorsEl) {
+        colorsEl.innerHTML = colors.map(function (c, i) {
+          return '<div class="color-dot' + (i === 0 ? ' active' : '') + '" style="background:' + c[0] + ';" title="' + c[1] + '" onclick="selectColor(this)"></div>';
+        }).join('');
+      }
+
+      // Size options per category
+      var sizeMap = {
+        Saree: { label: 'Select Blouse Size', opts: ['Free Size (6 Yds)', 'Blouse 32', 'Blouse 34', 'Blouse 36', 'Blouse 38', 'Blouse 40'] },
+        Kurti: { label: 'Select Size', opts: ['XS', 'S', 'M', 'L', 'XL', 'XXL'] },
+        Lehenga: { label: 'Select Size', opts: ['XS (24-26)', 'S (26-28)', 'M (28-30)', 'L (30-32)', 'XL (32-34)', 'Custom'] },
+        Churidar: { label: 'Select Size', opts: ['XS', 'S', 'M', 'L', 'XL', 'XXL'] },
+        Dupatta: { label: 'Select Length', opts: ['1.5m', '2m', '2.5m', '3m (Dupatta)'] }
+      };
+      var sz = sizeMap[p.cat] || sizeMap['Kurti'];
+      var sizeLbl = document.getElementById('detailSizeLabel');
+      if (sizeLbl) sizeLbl.textContent = sz.label;
+      var sizesEl = document.getElementById('detailSizes');
+      if (sizesEl) {
+        sizesEl.innerHTML = sz.opts.map(function (s, i) {
+          return '<button class="size-opt' + (i === 0 ? ' active' : '') + '" onclick="selectSize(this)">' + s + '</button>';
+        }).join('');
+      }
+
+      // Fabric table per category
+      var fabricMap = {
+        Saree: [['Fabric', 'Pure Silk / Handloom'], ['Length', '6.3 Meters'], ['Width', '44 inches'], ['Blouse', 'Unstitched 0.8m'], ['Wash', 'Dry Clean Only']],
+        Kurti: [['Fabric', 'Cotton / Georgette'], ['Style', 'Anarkali / Straight'], ['Length', 'Knee Length'], ['Sleeve', '3/4 Sleeve'], ['Wash', 'Machine Washable']],
+        Lehenga: [['Fabric', 'Net / Silk / Georgette'], ['Set Includes', 'Lehenga + Choli + Dupatta'], ['Length', 'Floor Length'], ['Work', 'Embroidered / Zari'], ['Wash', 'Dry Clean Only']],
+        Churidar: [['Fabric', 'Cotton / Silk Blend'], ['Set Includes', 'Kurta + Churidar + Dupatta'], ['Length', 'Calf Length'], ['Sleeve', 'Full / 3/4 Sleeve'], ['Wash', 'Machine Washable']],
+        Dupatta: [['Fabric', 'Silk / Chiffon / Net'], ['Length', '2.5 Meters'], ['Width', '30 inches'], ['Work', 'Embroidered / Printed'], ['Wash', 'Hand Wash Only']]
+      };
+      var fabrics = fabricMap[p.cat] || fabricMap['Saree'];
+      var fabricEl = document.getElementById('detailFabric');
+      if (fabricEl) {
+        fabricEl.innerHTML = fabrics.map(function (f) {
+          return '<span class="fabric-key">' + f[0] + '</span><span class="fabric-val">' + f[1] + '</span>';
+        }).join('');
+      }
+
+      // Wire Add to Cart button
+      var cartBtn = document.getElementById('detailAddCart');
+      if (cartBtn) cartBtn.setAttribute('onclick', 'addToCart(' + id + ')');
+
+      // Related products (same category, exclude current)
+      renderGrid('relatedGrid', products.filter(function (x) { return x.cat === p.cat && x.id !== id; }).slice(0, 4));
+
+      // Reset qty
+      var qtyEl = document.getElementById('qtyVal');
+      if (qtyEl) qtyEl.textContent = '1';
+    };
 
     // ─── CATEGORY HEADING ───
     function updateListingHeading() {
@@ -4751,13 +4981,13 @@
     })();
 
     // ── DARK MODE ──
-    window.toggleDark = function() {
+    window.toggleDark = function () {
       const h = document.documentElement;
       h.dataset.theme = h.dataset.theme === 'dark' ? 'light' : 'dark';
     };
 
     // ── MOBILE MENU ──
-    window.toggleMenu = function() {
+    window.toggleMenu = function () {
       var m = document.getElementById('mobileMenu');
       var h = document.getElementById('hamburger');
       m.classList.toggle('open');
@@ -4795,6 +5025,7 @@
       updateCartTotal();
       showCartNotif(product);
     }
+    window.addToCart = addToCart;
 
     function showCartNotif(product) {
       const notif = document.getElementById('cartNotif');
@@ -5037,23 +5268,246 @@
       if (resultEl) resultEl.textContent = sorted.length + ' products';
     }
 
-    // ── PAGE TRANSITION SMOOTHNESS ──
-    window.addEventListener('beforeunload', () => {
-      document.querySelectorAll('.page.active').forEach(p => {
-        p.style.opacity = '0';
-        p.style.transform = 'translateY(20px)';
-        p.style.transition = 'all .3s ease';
-      });
+    // ══════════════════════════════════════════════════
+    // ── EVENT DELEGATION — handles ALL product clicks ──
+    // ══════════════════════════════════════════════════
+    document.addEventListener('click', function (e) {
+      var target = e.target;
+
+      // ── Add to Cart (quick-cart bar) ──
+      var cartEl = target.closest('[data-action="cart"]');
+      if (cartEl) {
+        e.stopPropagation();
+        var id = parseInt(cartEl.getAttribute('data-id'));
+        addToCart(id);
+        return;
+      }
+
+      // ── Wishlist button ──
+      var wishEl = target.closest('[data-action="wish"]');
+      if (wishEl) {
+        e.stopPropagation();
+        var id = parseInt(wishEl.getAttribute('data-id'));
+        wishEl.classList.toggle('wished');
+        wishN += wishEl.classList.contains('wished') ? 1 : -1;
+        var wc = document.getElementById('wishCount');
+        if (wc) wc.textContent = wishN;
+        showToast(wishEl.classList.contains('wished') ? 'Added to wishlist ♡' : 'Removed from wishlist', 'info');
+        return;
+      }
+
+      // ── Quick view eye button ──
+      var detailBtn = target.closest('[data-action="detail"]');
+      if (detailBtn) {
+        e.stopPropagation();
+        var id = parseInt(detailBtn.getAttribute('data-id'));
+        window.showDetail(id);
+        return;
+      }
+
+      // ── Click anywhere on card → open detail ──
+      var card = target.closest('.product-card[data-id]');
+      if (card) {
+        var id = parseInt(card.getAttribute('data-id'));
+        window.showDetail(id);
+        return;
+      }
     });
 
-    // ── SMOOTH PRODUCT IMAGE LOADING ──
-    document.querySelectorAll('img[src]').forEach(img => {
-      img.style.opacity = '0';
-      img.style.transition = 'opacity .4s ease';
-      img.onload = () => { img.style.opacity = '1'; };
-      img.onerror = () => { img.style.opacity = '0.5'; };
-    });
+    // Expose key functions on window for any remaining inline onclick attributes
+    window.showPage = showPage;
+    window.addToCart = addToCart;
+    window.toggleWish = toggleWish;
+    window.filterByCategory = filterByCategory;
+    window.toggleChip = toggleChip;
+    window.updatePrice = updatePrice;
+    window.applySort = applySort;
+    window.applyFilters = applyFilters;
+    window.resetAllFilters = resetAllFilters;
+    window.handleSearch = handleSearch;
+    window.changeDetailImg = changeDetailImg;
+    window.selectColor = selectColor;
+    window.selectSize = selectSize;
+    window.changeQty = changeQty;
+    window.qtyChange = qtyChange;
+    window.showTracking = showTracking;
+    window.selectPayment = selectPayment;
+    window.switchAuth = switchAuth;
+    window.showProfileDashboard = showProfileDashboard;
+    window.hideCartNotif = hideCartNotif;
+
+  </script>
+
+  <!-- ── FAILSAFE: Product click handler (runs independently) ── -->
+  <script>
+    (function () {
+
+      // ── PER-PRODUCT SPECIFIC DETAILS (keyed by product ID) ──
+      var productDetails = {
+        1:  { type:'Traditional Paithani / Kanjeevaram Style Saree', material:'Pure Silk Blend / Art Silk', colour:'Golden Yellow with Teal Blue & Antique Gold Zari Borders', desc:'Heritage festive/wedding wear; features rich silk sheen, heavy gold zari across the pallu, and miniature circular motifs (buttas) woven across the body.', extra:[['Length','6.3 Meters'],['Blouse Piece','Unstitched 0.8m'],['Care','Dry Clean Only']] },
+        2:  { type:'A-Line Anarkali Kurti', material:'100% Pure Cotton', colour:'Jet Black with Maroon & White Leaf/Feather Motif Prints', desc:'Premium everyday wear; durable, colour-fast printed fabric with intricate geometric border on the neckline, sleeves, and hem.', extra:[['Fit','A-Line / Flared'],['Length','Knee Length'],['Care','Machine Washable']] },
+        3:  { type:'Straight Fit Salwar Suit', material:'Raw Silk / Faux Satin Silk', colour:'Emerald Green with Mint Green Dupatta & Pink/Gold Accents', desc:'Luxury bridal/festive wear; rich texture with heavy Kashmiri-style multi-colour embroidered neckline and sleeve cuffs, complete with sheer mint dupatta with delicate floral bootis.', extra:[['Set Includes','Kurta + Churidar + Dupatta'],['Length','Floor Length'],['Care','Dry Clean Only']] },
+        5:  { type:'Straight Fit Casual Kurti', material:'Soft Cotton / Rayon', colour:'Deep Crimson Maroon with Blue & Beige Block-Print Motifs', desc:'Regular comfort wear; shrink-resistant, easy to wash, featuring a stylish piping neckline and casual 3/4th sleeves.', extra:[['Fit','Straight Cut'],['Length','Knee Length'],['Care','Machine Washable']] },
+        7:  { type:'Patiala Salwar Kameez Set', material:'Georgette Kurta & Dupatta with Crepe Lining', colour:'Deep Teal / Midnight Green with Dull Gold Mirror-Work & Sequins', desc:'Premium festive/party wear; heavily embellished with faux-mirror floral embroidery clusters along the lower half and sleeves, paired with a matching embroidered dupatta border.', extra:[['Set Includes','Kameez + Patiala + Dupatta'],['Embroidery','Mirror Work & Sequins'],['Care','Dry Clean Only']] },
+        8:  { type:'Traditional Banarasi / Kanjeevaram Silk Saree', material:'Pure Art Silk Blend', colour:'Peacock Blue / Vibrant Teal with Metallic Silver Zari Work', desc:'Premium festive tier; features rich luster, dense silver-woven floral pallu, and broad ornamental silver borders running along the entire drape.', extra:[['Length','6.3 Meters'],['Blouse Piece','Unstitched 0.8m'],['Care','Dry Clean Only']] },
+        10: { type:'Ethnic Dupatta / Stole', material:'Art Silk / Poly-Georgette', colour:'Vibrant Multicolour — Fuchsia Pink, Teal, Gold, Mustard & Emerald Green Stripes', desc:'Vibrant accessory; printed with dense traditional floral vines across diagonal geometric stripes, finished with an ornate printed border.', extra:[['Length','2.5 Meters'],['Width','30 inches'],['Care','Hand Wash Only']] },
+        12: { type:'Modern Floral Print Saree', material:'Premium Fluid Georgette', colour:'Aquamarine Blue with Mint Green & Soft Yellow Abstract Florals', desc:'High-end casual/cocktail wear; incredibly soft and weightless drape featuring a vibrant watercolour floral print, sleek satin-piped border, and a matching aqua blue blouse piece.', extra:[['Length','5.5 Meters'],['Blouse Piece','Included'],['Care','Hand Wash / Dry Clean']] },
+        13: { type:'Straight Kurta with Pencil Pants & Dupatta', material:'Luxury Cotton-Satin / Soft Linen Blend', colour:'Charcoal Black with Dusty Pink & Olive Green Floral Crewel Embroidery', desc:'Boutique/Designer tier; modern minimalistic vertical floral embroidery, detailed embroidered slit neck, and a coordinating striped printed premium dupatta.', extra:[['Set Includes','Kurta + Pants + Dupatta'],['Embroidery','Crewel Thread Work'],['Care','Dry Clean Only']] },
+        19: { type:'Anarkali Suit Set with Pants & Dupatta', material:'Premium Cotton Blend / Rayon', colour:'Off-White / Ivory with Subtle Gold Pinstripe Accents', desc:'Lightweight, highly breathable, and comfortable for all-day wear; features elegant fabric-button detailing down the front and a sheer net dupatta with gold trim.', extra:[['Set Includes','Anarkali + Pants + Dupatta'],['Fit','Flared Anarkali'],['Care','Machine Washable']] },
+        20: { type:'Straight Fit Casual-to-Festive Kurti', material:'Premium Cambric Cotton', colour:'Deep Magenta Pink with Black & Antique Gold Borders', desc:'Daily chic wear; colour-fast, breathable fabric featuring a deep V-neckline framed with an elegant patterned metallic border, mirrored on the 3/4th sleeve cuffs.', extra:[['Fit','Straight Cut'],['Length','Hip Length'],['Care','Machine Washable']] },
+        23: { type:'Pakistani Style Loose-Fit Straight Suit', material:'Premium Organza / Fine Net with Zari Embroidery', colour:'Pastel Mint Green with Heavy Dull-Gold & Silver Metallic Embroidery', desc:'High-end luxury/formal wear; featuring statement wide bell sleeves with cutout lace hems, fully loaded tone-on-tone thread embroidery, and a matching luxury embroidered sheer dupatta.', extra:[['Set Includes','Kurta + Churidar + Dupatta'],['Embroidery','Zari & Metallic Thread'],['Care','Dry Clean Only']] },
+        24: { type:'Straight Kurta Churidar Set', material:'Chanderi Silk / Art Silk with Silk-Blend Dupatta', colour:'Lime Green Kurta, Coral Red Churidar & Multicolour Dupatta', desc:'Semi-formal / Festive tier; features heavy intricate thread embroidery around the neckline and a rich, multi-toned dupatta with tassel detailing.', extra:[['Set Includes','Kurta + Churidar + Dupatta'],['Embroidery','Thread & Stonework'],['Care','Dry Clean Only']] },
+        26: { type:'Festive Sheer Dupatta', material:'Premium Mono-Net', colour:'Metallic Silver / Ice White with Shimmering Sequins', desc:'High-glam festive wear; lightweight and fluid drape featuring scattered silver sequin bootis across the body and an intricate scalloped border with heavy mirror-style sequin embroidery.', extra:[['Length','2.5 Meters'],['Width','30 inches'],['Care','Dry Clean Only']] },
+        30: { type:'Rajasthani Leheriya / Bandhani Dupatta', material:'Pure Chiffon / Georgette', colour:'Vibrant Fuchsia Pink, Mustard Yellow & Sunset Orange Tie-Dye', desc:'Authentic ethnic grade; gorgeous breezy flow with traditional diagonal tie-dye stripes and playful multi-coloured pom-pom tassels at the corners.', extra:[['Length','2.5 Meters'],['Width','30 inches'],['Care','Hand Wash Only']] }
+      };
+
+      // ── CATEGORY FALLBACK DETAILS ──
+      var categoryDefaults = {
+        Saree:    { type:'Traditional Indian Saree', material:'Pure Silk / Handloom Fabric', colour:'As shown in image', extra:[['Length','6.3 Meters'],['Blouse Piece','Unstitched 0.8m'],['Care','Dry Clean Only']] },
+        Kurti:    { type:'Indian Ethnic Kurti', material:'Premium Cotton / Georgette', colour:'As shown in image', extra:[['Fit','Regular / Straight'],['Length','Knee Length'],['Care','Machine Washable']] },
+        Lehenga:  { type:'Bridal / Festive Lehenga Set', material:'Net / Silk / Georgette', colour:'As shown in image', extra:[['Set Includes','Lehenga + Choli + Dupatta'],['Length','Floor Length'],['Care','Dry Clean Only']] },
+        Churidar: { type:'Churidar Salwar Suit', material:'Cotton / Silk Blend', colour:'As shown in image', extra:[['Set Includes','Kurta + Churidar + Dupatta'],['Length','Calf Length'],['Care','Machine Washable']] },
+        Dupatta:  { type:'Ethnic Dupatta / Stole', material:'Silk / Chiffon / Net', colour:'As shown in image', extra:[['Length','2.5 Meters'],['Width','30 inches'],['Care','Hand Wash Only']] }
+      };
+
+      function attachProductClicks() {
+        document.body.addEventListener('click', function (e) {
+          // Cart button
+          var cartBtn = e.target.closest('[data-action="cart"]');
+          if (cartBtn) {
+            e.stopPropagation();
+            var cid = parseInt(cartBtn.dataset.id);
+            if (typeof addToCart === 'function') addToCart(cid);
+            return;
+          }
+          // Wish button
+          var wishBtn = e.target.closest('[data-action="wish"]');
+          if (wishBtn) {
+            e.stopPropagation();
+            wishBtn.classList.toggle('wished');
+            var wc = document.getElementById('wishCount');
+            if (wc) { var n = parseInt(wc.textContent) || 0; wc.textContent = wishBtn.classList.contains('wished') ? n + 1 : Math.max(0, n - 1); }
+            return;
+          }
+          // Any product card
+          var card = e.target.closest('.product-card[data-id]');
+          if (card) {
+            openProductDetail(parseInt(card.dataset.id));
+            return;
+          }
+        }, true);
+      }
+
+      function openProductDetail(id) {
+        var prods = window.products;
+        if (!prods) return;
+        var p = prods.find(function (x) { return x.id === id; });
+        if (!p) return;
+
+        // Get details (per-product or category fallback)
+        var d = productDetails[id] || categoryDefaults[p.cat] || categoryDefaults['Saree'];
+
+        // Navigate
+        document.querySelectorAll('.page').forEach(function (pg) { pg.classList.remove('active'); });
+        var dp = document.getElementById('page-detail');
+        if (dp) dp.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Images
+        var mi = document.getElementById('mainDetailImg');
+        if (mi) { mi.src = p.img; mi.alt = p.name; }
+        var th = document.getElementById('detailThumbnails');
+        if (th) {
+          th.innerHTML = [p.img, p.img2].map(function (src, i) {
+            return '<div class="thumb' + (i === 0 ? ' active' : '') + '" onclick="var m=document.getElementById(\'mainDetailImg\');m.src=\'' + src + '\';document.querySelectorAll(\'.thumb\').forEach(function(t){t.classList.remove(\'active\')});this.classList.add(\'active\')">'
+              + '<img src="' + src + '" alt="" /></div>';
+          }).join('');
+        }
+
+        // Badge & name
+        var be = document.getElementById('detailBadge'); if (be) be.textContent = p.badge || 'New';
+        var ne = document.getElementById('detailName'); if (ne) ne.textContent = p.name;
+
+        // Stars & rating
+        var st = '★'.repeat(Math.floor(p.rating)) + '☆'.repeat(5 - Math.floor(p.rating));
+        var se = document.getElementById('detailStars'); if (se) se.textContent = st;
+        var re = document.getElementById('detailRating'); if (re) re.textContent = p.rating + ' (' + p.reviews + ' reviews)';
+
+        // Price
+        var pe = document.getElementById('detailPrice'); if (pe) pe.textContent = '₹' + p.price.toLocaleString('en-IN');
+        var oe = document.getElementById('detailOldPrice'); if (oe) oe.textContent = '₹' + p.old.toLocaleString('en-IN');
+        var de2 = document.getElementById('detailDisc'); if (de2) de2.textContent = p.disc + '% OFF';
+
+        // Breadcrumb
+        var cl = document.getElementById('detailCatLink'); if (cl) cl.textContent = p.cat + 's';
+        var br = document.getElementById('detailBreadcrumb'); if (br) br.textContent = p.name;
+
+        // Colors
+        var colorMap = {
+          Saree: [['#7c1c2e','Maroon'],['#1a3a5c','Navy'],['#2d6a2d','Green'],['#c9a84c','Gold'],['#1a1a1a','Black']],
+          Kurti: [['#e75480','Pink'],['#c9a84c','Yellow'],['#1a6a5c','Teal'],['#3a1a5c','Purple'],['#7c1c2e','Maroon']],
+          Lehenga: [['#e75480','Pink'],['#c9a84c','Gold'],['#7c1c2e','Red'],['#2d6a2d','Green'],['#1a3a5c','Navy']],
+          Churidar: [['#7c1c2e','Red'],['#1a3a5c','Blue'],['#2d6a2d','Green'],['#c9a84c','Gold'],['#1a1a1a','Black']],
+          Dupatta: [['#e75480','Pink'],['#c9a84c','Gold'],['#7c1c2e','Maroon'],['#1a6a5c','Teal'],['#9b59b6','Purple']]
+        };
+        var cols = (colorMap[p.cat] || colorMap['Saree']);
+        var ce = document.getElementById('detailColors');
+        if (ce) ce.innerHTML = cols.map(function (c, i) {
+          return '<div class="color-dot' + (i === 0 ? ' active' : '') + '" style="background:' + c[0] + '" title="' + c[1] + '" onclick="document.querySelectorAll(\'.color-dot\').forEach(function(x){x.classList.remove(\'active\')});this.classList.add(\'active\')"></div>';
+        }).join('');
+
+        // Sizes
+        var sizeMap = {
+          Saree: { label: 'Select Blouse Size', opts: ['Free Size (6 Yds)', 'Blouse 32', 'Blouse 34', 'Blouse 36', 'Blouse 38', 'Blouse 40'] },
+          Kurti: { label: 'Select Size', opts: ['XS', 'S', 'M', 'L', 'XL', 'XXL'] },
+          Lehenga: { label: 'Select Size', opts: ['XS (24-26)', 'S (26-28)', 'M (28-30)', 'L (30-32)', 'XL (32-34)', 'Custom'] },
+          Churidar: { label: 'Select Size', opts: ['XS', 'S', 'M', 'L', 'XL', 'XXL'] },
+          Dupatta: { label: 'Select Length', opts: ['1.5m', '2m', '2.5m', '3m'] }
+        };
+        var sz = sizeMap[p.cat] || sizeMap['Kurti'];
+        var sl = document.getElementById('detailSizeLabel'); if (sl) sl.textContent = sz.label;
+        var sze = document.getElementById('detailSizes');
+        if (sze) sze.innerHTML = sz.opts.map(function (s, i) {
+          return '<button class="size-opt' + (i === 0 ? ' active' : '') + '" onclick="document.querySelectorAll(\'.size-opt\').forEach(function(b){b.classList.remove(\'active\')});this.classList.add(\'active\')">' + s + '</button>';
+        }).join('');
+
+        // Fabric table — per-product specific details
+        var fe = document.getElementById('detailFabric');
+        if (fe) {
+          var rows = [
+            ['Type', d.type],
+            ['Material', d.material],
+            ['Colour', d.colour],
+            ['Quality', d.desc || '100% Authentic & Premium Quality']
+          ];
+          if (d.extra) rows = rows.concat(d.extra);
+          fe.innerHTML = rows.map(function (f) {
+            return '<span class="fabric-key">' + f[0] + '</span><span class="fabric-val">' + f[1] + '</span>';
+          }).join('');
+        }
+
+        // Add to Cart button
+        var cb = document.getElementById('detailAddCart');
+        if (cb) cb.onclick = function () { if (typeof addToCart === 'function') addToCart(id); };
+
+        // Related products
+        var rel = document.getElementById('relatedGrid');
+        if (rel && typeof makeCard === 'function') {
+          rel.innerHTML = prods.filter(function (x) { return x.cat === p.cat && x.id !== id; }).slice(0, 4).map(function (r) { return makeCard(r); }).join('');
+        }
+
+        // Reset qty
+        var qe = document.getElementById('qtyVal'); if (qe) qe.textContent = '1';
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachProductClicks);
+      } else {
+        attachProductClicks();
+      }
+      window.openProductDetail = openProductDetail;
+    })();
   </script>
 </body>
 
-</html>
+</html>
