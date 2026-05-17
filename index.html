@@ -480,19 +480,22 @@
     }
 
     .slider {
-      display: flex;
+      position: relative;
+      width: 100%;
       height: 100%;
-      transition: transform .8s cubic-bezier(.4, 0, .2, 1);
     }
 
     .slide {
-      min-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
-      position: relative;
-      overflow: hidden;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+      transition: opacity 0.6s ease;
     }
 
     .slide-bg {
@@ -654,6 +657,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 10;
     }
 
     .slider-nav:hover {
@@ -3097,11 +3101,10 @@
   <div id="page-home" class="page active">
 
     <!-- HERO SLIDER -->
-    <section class="hero">
+    <section class="hero" id="heroSection">
       <div class="slider" id="heroSlider">
-        <div class="slide active">
-          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1920&h=1080&fit=crop&q=85"
-            class="slide-bg" alt="Bridal Saree Collection" />
+        <div class="slide active" id="slide-0">
+          <img src="images/pexels-vickievj-28457317.jpg" class="slide-bg" alt="Bridal Lehenga Collection" />
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <div class="slide-tag">✦ New Season 2026</div>
@@ -3115,9 +3118,8 @@
             </div>
           </div>
         </div>
-        <div class="slide">
-          <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=1920&h=1080&fit=crop&q=85"
-            class="slide-bg" alt="Kurti Collection" />
+        <div class="slide" id="slide-1">
+          <img src="images/Pink-Bridal-Wedding-lehenga-choli-2.jpeg" class="slide-bg" alt="Kurti Collection" />
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <div class="slide-tag">✦ Trending Now</div>
@@ -3131,9 +3133,8 @@
             </div>
           </div>
         </div>
-        <div class="slide">
-          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b4c06?w=1920&h=1080&fit=crop&q=85"
-            class="slide-bg" alt="Festive Collection" />
+        <div class="slide" id="slide-2">
+          <img src="images/Rama-Green-Bridal-Wedding-lehenga-choli0.jpeg" class="slide-bg" alt="Festive Collection" />
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <div class="slide-tag">✦ Festive Season Sale</div>
@@ -3144,14 +3145,81 @@
           </div>
         </div>
       </div>
-      <button class="slider-nav prev" onclick="prevSlide()">‹</button>
-      <button class="slider-nav next" onclick="nextSlide()">›</button>
-      <div class="slider-dots">
-        <div class="dot active" onclick="goSlide(0)"></div>
-        <div class="dot" onclick="goSlide(1)"></div>
-        <div class="dot" onclick="goSlide(2)"></div>
+      <button class="slider-nav prev" id="heroPrev">&#8249;</button>
+      <button class="slider-nav next" id="heroNext">&#8250;</button>
+      <div class="slider-dots" id="sliderDots">
+        <div class="dot active" id="dot-0"></div>
+        <div class="dot" id="dot-1"></div>
+        <div class="dot" id="dot-2"></div>
       </div>
     </section>
+
+    <!-- ── HERO SLIDER SCRIPT (standalone, runs right after hero HTML) ── -->
+    <script>
+      (function () {
+        var TOTAL = 3;
+        var cur = 0;
+        var timer = null;
+
+        function activate(n) {
+          cur = ((n % TOTAL) + TOTAL) % TOTAL;
+          // slides
+          var slides = document.querySelectorAll('#heroSlider .slide');
+          slides.forEach(function (s, i) {
+            s.style.display = (i === cur) ? 'flex' : 'none';
+          });
+          // dots
+          var dots = document.querySelectorAll('#sliderDots .dot');
+          dots.forEach(function (d, i) {
+            d.className = 'dot' + (i === cur ? ' active' : '');
+          });
+        }
+
+        function next() { activate(cur + 1); }
+        function prev() { activate(cur - 1); }
+
+        function startAuto() {
+          stopAuto();
+          timer = setInterval(next, 3000);
+        }
+        function stopAuto() {
+          if (timer) { clearInterval(timer); timer = null; }
+        }
+
+        // Init – show first slide, hide others via display
+        activate(0);
+
+        // Prev / Next buttons
+        var btnP = document.getElementById('heroPrev');
+        var btnN = document.getElementById('heroNext');
+        if (btnP) btnP.addEventListener('click', function () { stopAuto(); prev(); startAuto(); });
+        if (btnN) btnN.addEventListener('click', function () { stopAuto(); next(); startAuto(); });
+
+        // Dots
+        [0, 1, 2].forEach(function (i) {
+          var d = document.getElementById('dot-' + i);
+          if (d) d.addEventListener('click', function () { stopAuto(); activate(i); startAuto(); });
+        });
+
+        // Touch / swipe
+        var hero = document.getElementById('heroSection');
+        var tx = 0;
+        if (hero) {
+          hero.addEventListener('touchstart', function (e) { tx = e.changedTouches[0].screenX; }, { passive: true });
+          hero.addEventListener('touchend', function (e) {
+            var d = tx - e.changedTouches[0].screenX;
+            if (Math.abs(d) > 40) { stopAuto(); if (d > 0) next(); else prev(); startAuto(); }
+          }, { passive: true });
+        }
+
+        // Expose globally (so other code can call them if needed)
+        window._heroSlider = { next: next, prev: prev, goTo: activate };
+
+        // Start auto-play
+        startAuto();
+      })();
+    </script>
+
 
     <!-- MARQUEE -->
     <div class="marquee-wrap">
@@ -4509,17 +4577,72 @@
       if (breadcrumb) breadcrumb.textContent = crumb;
     }
 
-    // ── HERO SLIDER ──
-    let cur = 0, timer;
-    function goSlide(n) {
-      document.querySelectorAll('.slide').forEach((s, i) => { s.classList.toggle('active', i === n); });
-      document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === n));
-      document.querySelector('.slider').style.transform = `translateX(-${n * 100}%)`;
-      cur = n;
-    }
-    function nextSlide() { goSlide((cur + 1) % 3); }
-    function prevSlide() { goSlide((cur + 2) % 3); }
-    timer = setInterval(nextSlide, 5000);
+    // ── HERO SLIDER (runs after DOM ready) ──
+    (function () {
+      var total = 3;
+      var cur = 0;
+      var autoTimer = null;
+
+      function goSlide(n) {
+        cur = (n + total) % total;
+        document.querySelectorAll('.slide').forEach(function (s, i) {
+          s.classList.toggle('active', i === cur);
+        });
+        document.querySelectorAll('#sliderDots .dot').forEach(function (d, i) {
+          d.classList.toggle('active', i === cur);
+        });
+        document.getElementById('heroSlider').style.transform = 'translateX(-' + (cur * 100) + '%)';
+      }
+
+      function nextSlide() { goSlide(cur + 1); }
+      function prevSlide() { goSlide(cur - 1); }
+
+      // Auto-slide every 3 seconds
+      function startAuto() {
+        autoTimer = setInterval(nextSlide, 3000);
+      }
+      function stopAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+      }
+
+      // Wire up buttons by ID (no inline onclick needed)
+      var btnPrev = document.getElementById('heroPrev');
+      var btnNext = document.getElementById('heroNext');
+      if (btnPrev) btnPrev.addEventListener('click', function () { stopAuto(); prevSlide(); startAuto(); });
+      if (btnNext) btnNext.addEventListener('click', function () { stopAuto(); nextSlide(); startAuto(); });
+
+      // Wire up dots by ID
+      for (var i = 0; i < total; i++) {
+        (function (idx) {
+          var dot = document.getElementById('dot-' + idx);
+          if (dot) dot.addEventListener('click', function () { stopAuto(); goSlide(idx); startAuto(); });
+        })(i);
+      }
+
+      // Touch swipe
+      var hero = document.getElementById('heroSection');
+      var touchStartX = 0;
+      if (hero) {
+        hero.addEventListener('touchstart', function (e) {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        hero.addEventListener('touchend', function (e) {
+          var diff = touchStartX - e.changedTouches[0].screenX;
+          if (Math.abs(diff) > 40) {
+            stopAuto();
+            if (diff > 0) nextSlide(); else prevSlide();
+            startAuto();
+          }
+        }, { passive: true });
+      }
+
+      // Expose globally just in case
+      window.goSlide = goSlide;
+      window.nextSlide = nextSlide;
+      window.prevSlide = prevSlide;
+
+      startAuto();
+    })();
 
     // ── DARK MODE ──
     function toggleDark() {
