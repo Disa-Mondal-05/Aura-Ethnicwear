@@ -436,7 +436,7 @@
     }
 
     .mobile-menu {
-      display: none;
+      display: block;
       position: fixed;
       top: 0;
       left: 0;
@@ -447,11 +447,13 @@
       padding: 80px 24px 32px;
       overflow-y: auto;
       transform: translateX(100%);
-      transition: transform var(--transition);
+      transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+      pointer-events: none;
     }
 
     .mobile-menu.open {
       transform: translateX(0);
+      pointer-events: all;
     }
 
     .mobile-nav-links {
@@ -4263,7 +4265,7 @@
             <div class="contact-icon">📞</div>
             <div class="contact-item-text">
               <h4>Call Us</h4>
-              <p>+91 98765 43210<br />Mon–Sat, 10am–7pm</p>
+              <p>+91 96413 50244<br />Mon–Sat, 10am–7pm</p>
             </div>
           </div>
           <div class="contact-item">
@@ -4277,7 +4279,7 @@
             <div class="contact-icon">💬</div>
             <div class="contact-item-text">
               <h4>WhatsApp</h4>
-              <p>+91 98765 43210<br />Quick responses on WhatsApp</p>
+              <p>+91 96413 50244<br />Quick responses on WhatsApp</p>
             </div>
           </div>
           <div style="background:var(--beige);border-radius:var(--radius);padding:20px;margin-top:8px;">
@@ -4749,18 +4751,18 @@
     })();
 
     // ── DARK MODE ──
-    function toggleDark() {
+    window.toggleDark = function() {
       const h = document.documentElement;
       h.dataset.theme = h.dataset.theme === 'dark' ? 'light' : 'dark';
-    }
+    };
 
     // ── MOBILE MENU ──
-    function toggleMenu() {
-      const m = document.getElementById('mobileMenu');
-      const h = document.getElementById('hamburger');
+    window.toggleMenu = function() {
+      var m = document.getElementById('mobileMenu');
+      var h = document.getElementById('hamburger');
       m.classList.toggle('open');
       h.classList.toggle('open');
-    }
+    };
 
     // ── TOAST ──
     function showToast(msg, type = 'info') {
