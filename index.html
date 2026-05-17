@@ -1884,6 +1884,8 @@
     .form-group input,
     .form-group select,
     .form-group textarea {
+      width: 100%;
+      box-sizing: border-box;
       padding: 10px 14px;
       border: 1.5px solid var(--beige);
       border-radius: var(--radius-sm);
@@ -3332,9 +3334,7 @@
             <input type="text" placeholder="Search sarees, kurtis..." id="searchInput"
               oninput="handleSearch(this.value)" />
           </div>
-          <button class="dark-toggle" onclick="toggleDark()" title="Toggle theme">
-            <div class="toggle-thumb"></div>
-          </button>
+
           <button class="nav-icon wish-btn" onclick="showPage('wishlist')" title="Wishlist">♡ <span class="badge-count"
               id="wishCount">2</span></button>
           <button class="nav-icon cart-btn" onclick="showPage('cart')" title="Cart">🛍 <span class="badge-count"
@@ -3504,7 +3504,7 @@
     </div>
 
     <!-- CATEGORIES -->
-    <section class="categories">
+    <section class="categories" style="padding-top:60px;">
       <div class="container">
         <div class="section-title">
           <h2 class="serif">Shop by Category</h2>
